@@ -31,3 +31,8 @@ eksctl create cluster --name eks-cluster --region eu-west-1 --node-type c7i-flex
 aws eks update-kubeconfig --region eu-west-1 --name eks-cluster
 kubectl get nodes
 
+
+# Install Nginx Ingress Controller
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/cloud/deploy.yaml
+
